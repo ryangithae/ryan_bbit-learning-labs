@@ -18,13 +18,15 @@ class mqConsumerInterface:
         self, binding_key: str, exchange_name: str, queue_name: str
     ) -> None:
         # Save parameters to class variables
-
+        self.binding_key = binding_key
+        self.exchange_name = exchange_name
+        self.queue_name = queue_name
         # Call setupRMQConnection
-        pass
+        self.setupRMQConnection()
 
     def setupRMQConnection(self) -> None:
         # Set-up Connection to RabbitMQ service
-
+            
         # Establish Channel
 
         # Create Queue if not already present
